@@ -1,0 +1,38 @@
+// Código de Nav acá
+
+.containers{
+    background-color: @nav-bg;
+    h1{
+        font-size: 3.2rem;
+        text-align: center;
+        padding-top: 1.3rem;
+    }
+
+    nav{
+
+       padding-bottom: 1rem;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            li{
+                .size-text();
+                font-weight: bold;
+                
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: @shuttle-gray;
+                    color: @sea-shell;
+                }
+            }
+        }
+       
+    }
+}

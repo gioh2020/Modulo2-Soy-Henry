@@ -1,0 +1,136 @@
+// Conteindo del Home
+
+.home {
+
+  
+  .intro {
+    img{
+      margin-top: 0.5rem;
+      .border();
+    }
+    
+    h2 {
+      padding: 15px;
+    }
+
+    p {
+      padding:0 15px;
+    }
+
+  }
+
+  .music-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    img {
+      .border();
+      width: 28%;
+      margin: 20px 2.5%;
+      height: 100%;
+    }
+
+    @media(max-width:@phone){
+      .tecnologia ,
+      .ondas {
+        display: none;
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  
+
+  .musica-nueva {
+    padding: 15px;
+
+    h3 {
+      margin-top: 11px;
+    }
+
+    p {
+      margin-top: 13px;
+    }
+  }
+
+  .actual {
+    margin-top: 60px;
+    border-top: 1px solid @main-border-color;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+
+    .actual-text {
+      width: 50%;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 26px;
+      }
+
+      .btn {
+        .button(@btn-bg-color,@porcelain,7px);
+        width: fit-content;
+        padding: 10px 8px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition:background-color @transicion , color @transicion;
+        //transition:color @transicion;
+        
+
+        &:hover{
+          .button(@porcelain,@btn-bg-color,7px);
+        }
+      }
+
+    
+    
+    }
+
+    .actual-img {
+      width: 46%;
+      margin-left: 4%;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+
+    @media(max-width:@phone){
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0.1rem;
+      width: 95vw;
+      margin-left:0.8rem;
+
+    
+      //background-color: aqua;
+      .actual-img{
+        width: 100%;
+        margin: 0px;
+      }
+      .actual-text{
+        //background-color: aqua;
+        width: 100%;
+        .btn{
+          width: 100%;
+          text-align: center;
+          padding: 15px;
+        }
+      }
+    }
+
+  }
+  
+  
+}
+
