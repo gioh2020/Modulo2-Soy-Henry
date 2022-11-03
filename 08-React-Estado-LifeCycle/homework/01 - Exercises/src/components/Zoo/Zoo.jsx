@@ -19,23 +19,14 @@ export default function Zoo() {
    
    const handleSpecies =(event)=>{
    
-      if(event.target.value === 'Mamíferos'){
-       const filtroMamiferos = zoo.animals.filter(mamifero => mamifero.specie ==='Mamíferos')
-       setZoo({...zoo, animals: filtroMamiferos})
-      }
-      if(event.target.value === 'Reptiles'){
-         const filtroReptiles = zoo.animals.filter(mamifero => mamifero.specie ==='Reptiles')
-         setZoo({...zoo, animals: filtroReptiles})
-        }
-        if(event.target.value === 'Aves'){
-         const filtroAves = zoo.animals.filter(mamifero => mamifero.specie ==='Aves')
-         setZoo({...zoo, animals: filtroAves})
-        }     
+       const filtroAnimals = zoo.allAnimals.filter(animal => animal.specie === event.target.value)
+       setZoo({...zoo, animals: filtroAnimals})
+   
    }
 
    const handleAllSpecies =()=>{
+      setZoo({...zoo, animals: zoo.allAnimals})
       
-
    }
 
   const  handleInputChange = (event)=>{
