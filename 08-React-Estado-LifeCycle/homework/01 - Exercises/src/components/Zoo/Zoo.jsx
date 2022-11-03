@@ -18,16 +18,31 @@ export default function Zoo() {
 
    
    const handleSpecies =(event)=>{
-
+   
+      if(event.target.value === 'Mamíferos'){
+       const filtroMamiferos = zoo.animals.filter(mamifero => mamifero.specie ==='Mamíferos')
+       setZoo({...zoo, animals: filtroMamiferos})
+      }
+      if(event.target.value === 'Reptiles'){
+         const filtroReptiles = zoo.animals.filter(mamifero => mamifero.specie ==='Reptiles')
+         setZoo({...zoo, animals: filtroReptiles})
+        }
+        if(event.target.value === 'Aves'){
+         const filtroAves = zoo.animals.filter(mamifero => mamifero.specie ==='Aves')
+         setZoo({...zoo, animals: filtroAves})
+        }     
    }
+
    const handleAllSpecies =()=>{
+      
 
    }
 
   const  handleInputChange = (event)=>{
       setZoo({...zoo, zooName: event.target.value}) 
    }
-  
+   
+   // function reiniciar(){
    React.useEffect(()=>{
       fetch('http://localhost:3001/zoo')
        .then((res) => res.json())
@@ -42,6 +57,7 @@ export default function Zoo() {
    } ,[]
 
    );
+// }
    
    return (
       <div>
